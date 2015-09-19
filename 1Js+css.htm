@@ -1,0 +1,20 @@
+//1
+document.querySelector("#t .c").style.color = 'green';
+//2
+document.getElementsByTagName("td")[0].style.cssText="color: green; ";
+//3
+<style>
+.f {  color:green; }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('td.c').removeClass('c').addClass('f');
+});
+</script>
+
+
+SELECT * FROM category WHERE id NOT IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category )) ));
+
+
+SELECT * FROM category WHERE id NOT IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category ) ));
