@@ -13,8 +13,3 @@ $(document).ready(function(){
 });
 </script>
 
-
-SELECT * FROM category WHERE id NOT IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category )) ));
-
-
-SELECT * FROM category WHERE id NOT IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category WHERE id IN ( SELECT parent_category_id FROM category ) ));
